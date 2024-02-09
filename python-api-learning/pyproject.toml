@@ -1,0 +1,33 @@
+[project]
+name = "python-api-learning"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "seujorgenochurras", email = "eusoulegaldemaiseverdadeeujuro@gmail.com"},
+]
+
+dependencies = [
+    "fastapi>=0.109.2",
+    "uvicorn[standard]>=0.27.0.post1",
+    "pymongo>=4.6.1",
+]
+
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.2.1",
+    "isort>=5.13.2",
+]
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+api = "uvicorn src.fast_api_learning.main:app --reload"
+ruff = "ruff format ."
+lint = "isort ."
+format = {composite = ["ruff", "lint"]}
