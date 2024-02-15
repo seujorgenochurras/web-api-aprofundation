@@ -10,6 +10,11 @@ dependencies = [
     "fastapi>=0.109.2",
     "uvicorn[standard]>=0.27.0.post1",
     "pymongo>=4.6.1",
+    "motor>=3.3.2",
+    "anyio>=4.2.0",
+    "tornado>=6.4",
+    "pydantic>=2.6.1",
+    "pydantic[email]",
 ]
 
 requires-python = "==3.12.*"
@@ -21,6 +26,8 @@ license = {text = "MIT"}
 dev = [
     "ruff>=0.2.1",
     "isort>=5.13.2",
+    "motor-stubs>=1.7.1",
+    "motor-types>=1.0.0b4",
 ]
 
 [tool.pdm]

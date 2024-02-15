@@ -1,0 +1,9 @@
+{
+    "python.analysis.extraPaths": [
+        "./__pypackages__/3.12/lib",
+        "./__pypackages__/3.12/lib/motor/motor_"
+    ],
+    "launch": {
+        "env" : {"PYTHONPATH" : "${workspaceRoot}"}
+        },
+}
